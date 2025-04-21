@@ -2,33 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>USA Number Status Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USA Number Status Checker | Ahtisham</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="toggle-container">
-    <label class="switch">
-      <input type="checkbox" id="modeToggle">
-      <span class="slider round"></span>
-    </label>
-  </div>
-
+  <div class="codex-bg"></div>
   <div class="container">
-    <h2 class="typing-text"></h2>
-    <input type="text" id="phoneNumber" placeholder="Enter USA Number">
-    <button onclick="checkStatus()">Check Status</button>
-    <button onclick="clearResult()">Clear</button>
-    <div id="loading" class="loading">Checking...</div>
-    <div id="result" class="result-box"></div>
-    <div class="action-buttons">
-      <button onclick="copyResult()">Copy</button>
-      <button onclick="exportPDF()">Export PDF</button>
-      <button onclick="shareResult()">Share</button>
+    <div class="header">
+      <h1><i class="fas fa-phone-alt"></i> USA Number Status Checker</h1>
+      <div class="creator">Created by <span>Ahtisham</span></div>
     </div>
-    <div id="history" class="history-box"></div>
-    <p class="credit">Created by <a href="skype:live:.cid.6a4827c093354752?chat">Ehtisham</a></p>
+    
+    <div class="input-group">
+      <input type="text" id="phoneNumber" placeholder="Enter USA Number (e.g. 1234567890)" pattern="\d*" maxlength="10">
+      <button onclick="checkStatus()">
+        <i class="fas fa-search"></i> Check Status
+      </button>
+    </div>
+    
+    <div class="result-box" id="result">
+      <div class="result-header">
+        <h3>Result</h3>
+        <button id="copyBtn" onclick="copyResults()"><i class="far fa-copy"></i> Copy</button>
+      </div>
+      <div id="resultContent"></div>
+    </div>
+    
+    <div class="features">
+      <div class="feature"><i class="fas fa-bolt"></i> Fast API</div>
+      <div class="feature"><i class="fas fa-shield-alt"></i> Secure</div>
+      <div class="feature"><i class="fas fa-database"></i> Updated Database</div>
+    </div>
   </div>
 
+  <div class="watermark">CodeX</div>
+  
   <script src="script.js"></script>
 </body>
 </html>
