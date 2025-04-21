@@ -2,27 +2,20 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #fff;
-}
-
-.background-overlay {
-  background-image: url('https://www.transparenttextures.com/patterns/codex.png');
-  background-color: #1e1e2f;
-  background-blend-mode: overlay;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .container {
   max-width: 500px;
-  background: rgba(0, 0, 0, 0.75);
+  margin: 100px auto;
+  background: rgba(0, 0, 0, 0.3);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 input {
@@ -42,7 +35,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 10px;
+  margin: 5px;
 }
 
 button:hover {
@@ -50,21 +43,52 @@ button:hover {
 }
 
 .result-box {
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 20px;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255,255,255,0.1);
   border-radius: 10px;
   text-align: left;
+  word-wrap: break-word;
 }
 
-.credit {
-  margin-top: 25px;
+.footer {
+  margin-top: 20px;
   font-size: 14px;
   color: #ccc;
 }
 
-.creator {
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
+.footer a {
   color: #ffc107;
+  text-decoration: none;
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+  user-select: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+.dark-mode .container {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .result-box {
+  background-color: rgba(255,255,255,0.15);
 }
