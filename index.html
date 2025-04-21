@@ -9,14 +9,26 @@
 <body>
   <div class="background-text">Codex</div>
   <div class="container">
-    <h2>USA Number Status Checker</h2>
+    <h2>📞 USA Number Status Checker</h2>
     <input type="text" id="phoneNumber" placeholder="Enter USA Number">
     <button onclick="checkStatus()">Check Status</button>
+    
     <div class="actions">
-      <button onclick="copyResult()">Copy Result</button>
-      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      <button onclick="copyResult()">📋 Copy Result</button>
+      <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      <button onclick="exportToPDF()">🖨️ Export to PDF</button>
+      <button onclick="shareResult()">🔗 Share</button>
     </div>
+    
     <div id="result" class="result-box"></div>
+    <div id="personInfo" class="result-box"></div>
+    <div id="loading" class="loading">Loading...</div>
+
+    <div class="history">
+      <h3>Recent Searches</h3>
+      <ul id="recentList"></ul>
+    </div>
+
     <div class="footer">Created by <a href="skype:live:.cid.6a4827c093354752">Ehtisham</a></div>
   </div>
 
