@@ -6,6 +6,11 @@ body {
   color: #fff;
 }
 
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
 .container {
   max-width: 500px;
   margin: 100px auto;
@@ -14,8 +19,6 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
 input {
@@ -48,7 +51,37 @@ button:hover {
   background-color: rgba(255,255,255,0.1);
   border-radius: 10px;
   text-align: left;
-  word-wrap: break-word;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.history {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  background-color: rgba(255,255,255,0.05);
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loading {
+  display: none;
+  font-style: italic;
+  margin-top: 10px;
 }
 
 .footer {
@@ -71,24 +104,4 @@ button:hover {
   color: rgba(255, 255, 255, 0.05);
   z-index: 0;
   user-select: none;
-}
-
-.actions {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.dark-mode {
-  background: #121212;
-  color: #eee;
-}
-
-.dark-mode .container {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode .result-box {
-  background-color: rgba(255,255,255,0.15);
 }
