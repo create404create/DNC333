@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USA Number Status Checker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <div class="container">
+    <h2 class="typing-text"></h2>
+    <input type="text" id="phoneNumber" placeholder="Enter USA Number">
+    <button onclick="checkStatus()">Check Status</button>
+    <button onclick="clearResult()">Clear</button>
+    <div id="loading" class="loading">Checking...</div>
+    <div id="result" class="result-box"></div>
+    <div class="action-buttons">
+      <button onclick="copyResult()">Copy</button>
+      <button onclick="exportPDF()">Export PDF</button>
+      <button onclick="shareResult()">Share</button>
+    </div>
+    <div id="history" class="history-box"></div>
+    <p class="credit">Created by <a href="skype:live:.cid.6a4827c093354752?chat">Ehtisham</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
