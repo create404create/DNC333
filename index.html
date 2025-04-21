@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>USA Number Status Checker</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="background-overlay">
-    <div class="container">
-      <h2>USA Number Status Checker</h2>
-      <input type="text" id="phoneNumber" placeholder="Enter USA Number" onkeypress="handleEnter(event)">
-      <button onclick="checkStatus()">Check Status</button>
-      <div id="result" class="result-box"></div>
-      <div id="personInfo" class="result-box"></div>
-      <button id="copyBtn" onclick="copyResults()">📋 Copy Result</button>
-      <p class="credit">Created by <span class="creator">Ehtisham</span></p>
+  <div class="background-text">Codex</div>
+  <div class="container">
+    <h2>USA Number Status Checker</h2>
+    <input type="text" id="phoneNumber" placeholder="Enter USA Number">
+    <button onclick="checkStatus()">Check Status</button>
+    <div class="actions">
+      <button onclick="copyResult()">Copy Result</button>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
+    <div id="result" class="result-box"></div>
+    <div class="footer">Created by <a href="skype:live:.cid.6a4827c093354752">Ehtisham</a></div>
   </div>
 
   <script src="script.js"></script>
