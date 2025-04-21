@@ -2,26 +2,27 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #000428, #004e92);
   color: #fff;
-  transition: 0.3s;
 }
 
-.dark-theme {
-  background: #121212;
-  color: #e0e0e0;
+.background-overlay {
+  background-image: url('https://www.transparenttextures.com/patterns/codex.png');
+  background-color: #1e1e2f;
+  background-blend-mode: overlay;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   max-width: 500px;
-  margin: 80px auto;
+  background: rgba(0, 0, 0, 0.75);
   padding: 30px;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
 input {
@@ -41,7 +42,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  margin: 5px;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -49,64 +50,21 @@ button:hover {
 }
 
 .result-box {
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 20px;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.05);
   border-radius: 10px;
   text-align: left;
 }
 
-.loading {
-  display: none;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.btn-group {
-  margin-top: 10px;
-}
-
-.theme-toggle {
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-.recent-searches {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.recent-searches ul {
-  list-style: none;
-  padding: 0;
-}
-
-.recent-searches li {
-  background: rgba(255,255,255,0.1);
-  padding: 8px;
-  margin-bottom: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.background-text {
-  position: fixed;
-  font-size: 120px;
-  color: rgba(255,255,255,0.03);
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  user-select: none;
-  z-index: 1;
-}
-
 .credit {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 14px;
+  color: #ccc;
 }
 
-.credit a {
+.creator {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
   color: #ffc107;
-  text-decoration: none;
 }
